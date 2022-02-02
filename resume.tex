@@ -1,0 +1,47 @@
+\documentclass[letter,10pt]{article}
+\usepackage[utf8]{inputenc}
+
+%====================
+% File:         resume.tex
+% Editor:       https://github.com/NJManganelli
+%               https://www.linkedin.com/
+% Last Updated: Feb 2nd, 2022
+% Notes:        All formatting is done in TLCresume.sty
+%               No need to touch that file. 
+%               All actual content is in the sections/ folder.
+%====================
+
+\usepackage{TLCresume}
+
+%====================
+% CONTACT INFORMATION
+%====================
+\def\name{Nick Manganelli}
+\def\phone{(623) 760-7276}
+\def\city{St. Genis-Pouilly, France}
+\def\email{NickManganelli@gmail.com}
+% \def\LinkedIn{nicholas-j-manganelli} % linkedin.com/in/______
+\def\github{NJManganelli} % github username
+\def\role{PhD Candidate, Physics (HEP-EXP)} % JOB TITLE
+
+\input{_header}
+\begin{document}
+\input{sections/objective}
+
+\section{Skills}
+\input{sections/skills}
+
+\section{Technical Experience}
+\input{sections/experience}
+
+\section{Education}
+\input{sections/education}
+
+% make a newpage wherever it is a clean break
+% \newpage
+
+\section{Activities}
+\input{sections/activities}
+
+
+\end{document}
