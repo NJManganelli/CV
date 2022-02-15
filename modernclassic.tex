@@ -1,0 +1,315 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.3 (29/10/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage[scale=0.75]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Nick} % Your first name
+\familyname{Manganelli} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Curriculum Vitae}
+%\address{123 Broadway}{City, State 12345}
+\mobile{+1 (623) 760 7276}
+%\phone{(000) 111 1112}
+%\fax{(000) 111 1113}
+\email{NickManganelli AT gmail.com}
+%\homepage{staff.org.edu/~jsmith}{staff.org.edu/$\sim$jsmith} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+%\extrainfo{additional information}
+%\photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+%\quote{"A witty and playful quotation" - John Smith}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	COVER LETTER
+%----------------------------------------------------------------------------------------
+
+% To remove the cover letter, comment out this entire block
+
+%\clearpage
+
+%\recipient{HR Department}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
+%\date{\today} % Letter date
+%\opening{Dear Sir or Madam,} % Opening greeting
+%\closing{Sincerely yours,} % Closing phrase
+%\enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
+
+%\makelettertitle % Print letter title
+
+
+%\makeletterclosing % Print letter signature
+
+%\newpage
+
+%----------------------------------------------------------------------------------------
+%	CURRICULUM VITAE
+%----------------------------------------------------------------------------------------
+
+\makecvtitle % Print the CV title
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\section{Ph.D. Dissertation}
+
+\cvitem{Title}{\emph{Search for Standard Model Production of Four Top Quarks in proton-proton Collisions at 13 TeV in the opposite-sign dilepton channel}}
+\cvitem{Supervisors}{Professor Robert Clare \& Professor Steve Wimpenny}
+%\cvitem{Description}{Description}
+
+\section{Education}
+
+\cventry{(exp) Summer 2022}{Ph.D. in Physics}{The University of California}{Riverside}{}{}  % Arguments not required can be left empty
+\cventry{Dec 2017}{Master of Science in Physics}{The University of California}{Riverside}{\textit{GPA -- 3.9}}{}
+\cventry{May 2012}{Bachelor of Science in Physics}{Northern Arizona University}{}{\textit{GPA -- 4.0}}{Magna Cum Laude}
+\cventry{May 2012}{Bachelor of Science in Mathematics}{Northern Arizona University}{}{\textit{GPA -- 4.0}}{Magna Cum Laude}
+
+
+%----------------------------------------------------------------------------------------
+%	AWARDS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Awards}
+\cvitemwithcomment{2021}{Certificate of Excellence}{\textit{Seventh Summer School on Machine Learning in HEP}} %In July
+\cvitemwithcomment{2019}{CMS Achievement Award}{\textit{Compact Muon Solenoid Collaboration}}
+%\cvitemwithcomment{2017}{Provost Research Fellowship}{\textit{University of California - Riverside}}%%_Nomination_ for outstanding teaching award
+\cvitemwithcomment{2016}{Provost Research Fellowship}{\textit{University of California - Riverside}}
+\cvitemwithcomment{2009 -- 2012}{Dean's List}{\textit{Northern Arizona University}}
+\cvitemwithcomment{2010}{Adel Physics Scholarship}{\textit{Northern Arizona University}}
+%----------------------------------------------------------------------------------------
+%	SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Skills}
+\cvitem{Languages}{\textsc{Python}, \textsc{C++}, \LaTeX, zsh}
+\cvitem{Tools}{\textsc{ROOT}, Git, PyTorch (ML), Scikit-learn (ML)}
+\cvitem{Software}{CMS Software (CMSSW)}
+\cvitem{Soft Skills}{Team Leadership, Mentoring, 
+Coordination work}
+\cvitem{Training}{Cherry-picker, working at heights, 
+work in radiation-control zones}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+%====================
+% RESEARCH EXPERIENCE
+%====================
+\cventry{Apr 2018 -- Present}{Graduate Student Researcher}{University of California, Riverside}{CERN, Geneva, Switzerland}{}{Performed dissertation work searching for the production of $t\bar{t}t\bar{t}$ at the LHC using the CMS Detector's 2017-2018 data.
+\newline{}
+\begin{itemize}
+\item Posted at CERN for hardware work and physics analysis
+\item Performed studies evaluating new resolved top-tagging algorithms
+\item Built new analysis framework using ROOT's RDataFrame, leveraging Python and C++
+\item Implemented entirety of trigger selection and channel orthogonality, POG corrections, systematic uncertainties, and conversion to CMS' statistical inference package (Higgs Combine)
+\item Performed systematic uncertainty studies, and Monte Carlo sample stitching for two channels of the CMS Four Top combination (CADI TOP-21-005)
+\item Took on role of postdoctoral researcher and mentored junior graduate student in the group on basic analysis and coding practices, ROOT, and CMS Software stack (CMSSW)
+\newline{}
+\end{itemize}}
+
+%====================
+% RESEARCH EXPERIENCE
+%====================
+\cventry{Sep 2019 -- Oct 2021}{CSC Deputy Run Coordinator}{CMS Collaboration}{CERN, Geneva, Switzerland}{}{Commissioned chambers, supervised Detector On Call shifters, and coordinated with CMS for the preparation of the detector for data taking in 2022.
+\newline{}
+\begin{itemize}
+\item Worked alongside CSC Run Coordinator and with Technical Coordinators
+\item Served as liaison with the rest of CMS Run Coordination for daily operations
+\item Crucial role in commissioning newly upgraded and re-installed chambers
+\item Coordinated tests with new GEM sub-detector operations team
+\item Trained and supervised students and postdocs working as Detector On Call shifters
+\item Debugged detector problems by fixing connections and replacing electronics on the CMS detector, employing a cherry-picker for work on chambers
+\item Coordinated activities related to commissioning software and firmware upgrades
+\item Served as Acting Run Coordinator for last 2 months of my 2 year term, and trained in-coming deputy Run Coordinator
+\newline{}
+\end{itemize}}
+
+%====================
+% RESEARCH EXPERIENCE
+%====================
+\cventry{Nov 2018 -- Sep 2019}{Test Team Leader, Member}{CMS Collaboration}{CERN, Geneva, Switzerland}{}{Commissioned chambers, supervised Detector On Call shifters, and coordinated with CMS for the preparation of the detector for data taking in 2022.
+\newline{}
+\begin{itemize}
+\item Tested and debugged electronics and chamber problems after their extraction and electronics upgrades
+\item Followed controlled radiation zone procedures during work with irradiated chambers that were extracted from the CMS detector
+\item Lead one of two test teams for latter half of the role, overseeing half a dozen graduate students and postdoctoral researchers
+\item Assisted with test procedures and documentation
+\item Brainstormed solutions to various problems
+\item Ensured on-time delivery of upgraded chambers for CMS' Muon Critical Path works
+\newline{}
+\end{itemize}}
+
+%====================
+% RESEARCH EXPERIENCE
+%====================
+\cventry{Jul 2018 -- Oct 2018}{Test Stand Construction}{CMS Collaboration}{CERN, Geneva, Switzerland}{}{Supported Upgrades of the Large Hadron Collider's Compact Muon Solenoid experiment.
+\newline{}
+\begin{itemize}
+\item Worked in tandem with Staff Scientist from Cathode Strip Chamber sub-detector
+\item Set up server blades with new operating systems
+\item Installed upgraded electronics on chambers
+\item Debugged and upgraded test software to coincide with new FPGA
+firmware
+\item Provided feedback for experts to iterate on software and firmware
+\item Successfully completed the construction of 3 test stands for the CMS critical-path upgrades to muon endcap
+\newline{}
+\end{itemize}}
+
+%====================
+% TEACHING EXPERIENCE
+%====================
+\cventry{Jan 2018 -- Mar 2018}{Discussion Section Leader}{University of California, Riverside}{Riverside, CA, USA}{}{
+\newline{}
+\begin{itemize}
+\item Provided supplementary instruction for students in introductory physics
+\item Helped students prepare for mid-terms and finals
+\item Assisted students in understanding physics concepts using instruction complementary to their main lectures
+\newline{}
+\end{itemize}}
+
+%====================
+% TEACHING EXPERIENCE
+%====================
+\cventry{Sep 2017 -- Dec 2017}{Lab Teaching Assistant}{University of California, Riverside}{Riverside, CA, USA}{}{
+\newline{}
+\begin{itemize}
+\item Guided students in introductory physics lab experiments
+\item Graded lab reports, mid-terms, and finals
+\item Crafted weekly quizzes to test students' learning progress.
+\item Helped students understand physics concepts using a variety of teaching techniques
+\newline{}
+\end{itemize}}
+
+%====================
+% INDUSTRY EXPERIENCE
+%====================
+\cventry{2012 -- 2016}{Vice President}{A.T.L. Industries}{Camp Verde, AZ, USA}{}{Served as executive in a small business manufacturing specialized tools for the U.S. federal government and commercial trucking industry.
+\newline{}
+\begin{itemize}
+\item 
+\item 
+\newline{}
+\end{itemize}}
+
+%====================
+% UNDERGRAD EXP
+%====================
+\cventry{2011 -- 2012}{Undergraduate Student Researcher}{Northern Arizona University}{Flagstaff, AZ, USA}{}{
+\newline{}
+\begin{itemize}
+\item Supervised by Mark James
+\item Used Matlab to create simulation code for propagation of laser light and reflection from non-planar surfaces
+\newline{}
+\end{itemize}}
+
+%====================
+% UNDERGRAD EXP
+%====================
+\cventry{2010 --- 2011}{Undergraduate Student Researcher}{Northern Arizona University}{Flagstaff, AZ, USA}{}{
+\newline{}
+\begin{itemize}
+\item Supervised by David Cornelison
+\item Used infrared spectroscopy to study astrophysical ices
+\item Constructed new sample cells for use in high-vacuum environment
+\item Upgraded equipment, such as adding new vacuum turbofans
+\newline{}
+\end{itemize}}
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------------
+\section{Peer Reviewed Publications (w/ Substantial Contribution)}
+\cventry{Mar 2020}{Nick Manganelli}{Upgrades to the CMS Cathode Strip Chambers for the HL-LHC}{Presented at Innovative Particle and Radiation Detectors 2019}{}{Journal of Instrumentation, Volume 15, March 2020 (C03047)}
+
+%----------------------------------------------------------------------------------------
+%	PAPERS IN PROGRESS SECTION
+%----------------------------------------------------------------------------------------
+\section{Papers in Progress (w/ Substantial Contribution)}
+\cventry{(exp) 2022}{CMS}{Evidence for the simultaneous production of four top quarks in proton-proton collisions at $\sqrt{s} = 13\TeV$}{}{CADI-line TOP-21-005}{in preparation for Physical Review Letters}
+
+%----------------------------------------------------------------------------------------
+%	ACTIVITIES SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Workshops and Schools}
+\cventry{Jan 2021}{Co-lead Facilitator}{CMS Data Analysis School @ LPC 2021, Top Mass Exercise}{}{}{}
+\cventry{Jul 2021}{Student}{Yandex' Seventh Summer School on Machine Learning in High Energy Physics}{}{}{}
+
+%----------------------------------------------------------------------------------------
+%	CONFERENCE TALKS, WORKSHOPS, SCHOOLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Conference Talks}%, Workshops, Schools}
+\cventry{Apr 2021}{APS April Meeting}{\textit{Search for four-top production in CMS using the latest collision data}}{}{}{}
+
+\cventry{Oct 2019}{IPRD2019}{\textit{Upgrade to the CMS Cathode-Strip-Muon System for the HL-LHC}}{}{}{}
+
+\cventry{Sep 2018}{CERN}{Ph.D. Candidacy Talk}{}{}{}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Languages}
+
+\cvitemwithcomment{Mothertongue}{English}{}
+\cvitemwithcomment{Basic}{Spanish, French}{}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+%\section{Interests}
+
+%\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+
+%\cvlistdoubleitem{Piano}{Chess}
+%\cvlistdoubleitem{Cooking}{Dancing}
+%\cvlistitem{Running}
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	References
+%----------------------------------------------------------------------------------------
+\section{References}
+\cventry{}{Robert Clare}{}{Professor Emeritus of Physics}{}{University of California,Riverside}
+\cventry{}{Steve Wimpenny}{}{Professor of Physics}{}{University of California,Riverside}
+\cventry{}{Darien Wood}{}{Professor of Physics}{}{Northeastern University}
+\end{document}
