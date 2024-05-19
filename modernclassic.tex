@@ -114,7 +114,7 @@
 %	SKILLS SECTION
 %----------------------------------------------------------------------------------------
 \section{Hard Skills}
-\cvitem{Programming}{\textsc{Python} (Advanced), \textsc{C++} (Advanced), \LaTeX, \textsc{zsh}, \textsc{Java} (Basic)}
+\cvitem{Programming}{\textsc{Python} (Advanced), \textsc{C++} (Advanced), \textsc{git Continuous Integration}, \textsc{Python Packaging}, \textsc{Xilinx HLS}, \LaTeX, \textsc{zsh}, \textsc{Java} (Basic)}
 \cvitem{Tools}{Git, PyTorch (ML), Scikit-learn (ML), Scikit-hep (uproot, awkward), coffea, RDataFrame}
 \cvitem{Software}{CMS Software (CMSSW), \textsc{CUDA (GPUs)}, \textsc{ROOT}}
 \cvitem{Training}{Cherry-picker operation, Working at heights, 
@@ -136,32 +136,68 @@ Work in radiation-control zones}
 %====================
 % RESEARCH EXPERIENCE
 %====================
-\cventry{Jan 2023 -- Now}{Postdoctoral Researcher}{University of Colorado, Boulder}{Fermilab, Batavia, IL, USA}{}{Performed work for the CMS Phase II Level 1 Trigger Upgrade and conducted an analysis searching for Electroweak SUSY at the LHC using the CMS Detector's 2017-2023 data.
+\cventry{Jan 2023 -- Now}{Postdoctoral Researcher}{University of Colorado, Boulder}{Fermilab, Batavia, IL, USA}{}{Analysis searching for Electroweak SUSY at the LHC using the CMS Detector's 2017-2023 data.
 \begin{itemize}
 \item Based at Fermilab for collaboration with colleagues
-\item Conducted an analysis searching for Electroweak SUSY in the  $ZH + MET$ channel at the LHC using the CMS Detector's 2017-2023 data.
+\item (WIP) Conducting an analysis searching for Electroweak SUSY in the  $ZH + MET$ channel at the LHC using the CMS Detector's 2017-2023 data.
+\item Designed cutting-edge containerized framework to support analysis, using the latest versions of software from the IRIS-HEP and HSF groups as well as industry: coffea, scikit-hep (awkward, uproot, vector),  dask
+\item Conducted initial feasibility studies for the analysis, ensuring good sensitivity and room to improve over previous attempts in CMS and ATLAS
+\item Prepared Monte Carlo request for new simulation samples based on my sensitivity studies
+\item Preparing to do studies within the analysis of Full Simulation against Fast Simulation and the new Flash Simulation methods for computationally-efficient Monte Carlo production within CMS
 \newline{}
-\end{itemize}}
-
-%====================
-% RESEARCH EXPERIENCE
-%====================
-\cventry{Oct 2023 -- Now}{Software R\&D Lead, Column-Joining}{University of Colorado, Boulder}{Fermilab, Batavia, IL, USA}{}{US-CMS funded project to perform columnar data-joining
+\end{itemize}
+Performed work for the CMS Phase II Level 1 Trigger Upgrade
 \begin{itemize}
-\item Wrote proposal for and awarded funding for project
-\item Ongoing project to combine industry and HEP-specific SW 
+\item Maintainer of CMSSW emulation (C++) and eirmware (HLS) for the Global Track Trigger upgrade
+\item Attained bit-accurate agreement between emulation and HLS firmware for the central GTT algorithm, FastHisto, which is responsible for finding the Primary Vertex in a collision and permits PUPPI reconstruction at Level 1 in the Correlator Trigger
+\item Mentored and assisted 5 graduate students on their algorithm development within GTT, for Track Jets, Track MET, Track HT, and Meson reconstruction
+\item Reviewed code for above algorithsm and provided feedback
+\item Refactored and updated emulation code to improve writing and reading raw data, essential ingredients for CMSSW data packers and unpackers
+\item Fixed identified bugs and improved code for better maintainability across the GTT emulation stack, following the latest developments and best practices
+\item Liased between CMS Offline Software Conveners and GTT group to facilitate faster and more efficient work
+\item Spearheaded and developed code for GTT physics objects in the newly created L1Nano central data format, beginning much-needed consolidation of the analysis format and paving the way to more shareable, centrally-validated workflows
+\item Engaged with the community through questions and feedback in discussions to contribute to the CMS experiment's data analysis tools and methods
+\newline{}
+\end{itemize}
+}
+
+%====================
+% RESEARCH EXPERIENCE
+%====================
+\cventry{Oct 2023 -- Now}{Software R\&D Lead, Column-Joining with ServiceX and Scikit-HEP}{University of Colorado, Boulder}{Fermilab, Batavia, IL, USA}{}{US-CMS funded project to perform columnar data-joining
+\begin{itemize}
+\item Wrote proposal for and awarded funding for project (half-salary renumeration)
+\item Ongoing project to combine industry and HEP-specific SW to solve challenges with limited disk space and compute power for the upcoming High-Luminosity LHC era, in which 10x the LHC data is expected
+\item Collaborated with Ben Galewsky (Sr. Research Software Engineer at National Center for Supercomputing Applications) and Burt Holzman (Fermi National Accelerator Laboratory)
+\item Prototyped components for an end-to-end data-transformation and joining system leveraging ServiceX, Trino, and coffea
+\item Benchmarked code to identify bottlenecks, ensuring viability of design
+\item (WIP) Designing code to build TypeTracers for joinable data in ROOT format to then feed through a coffea and scikit-hep analysis, triggering on-demand column-joining
+\item (WIP) Writing code to bridge to ServiceX to handle the transformation of ROOT to parquet
+\item (WIP) Writing code to automatically deduce and submit a query to the distributed Trino service, ingesting parquet data and efficiently joining only the necessary columns for an analysis
 \newline{}
 \end{itemize}}
 
 %====================
 % RESEARCH EXPERIENCE
 %====================
-\cventry{Jan 2023 -- Dec 2023}{Software R\&D Lead, Columnar Analysis and IaaS}{University of Colorado, Boulder}{Fermilab, Batavia, IL, USA}{}{US-CMS funded project to integrate Inference-as-a-Service with HEP analysis tools
+\cventry{March 2023 -- June 2024}{BTV Contact for CMS SUS PAG}{University of Colorado, Boulder}{Fermilab, Batavia, IL, USA}{}{
+\begin{itemize}
+\item Served as main point of contact for analyses in the CMS SUS Physics Analysis Group
+\item Assisted analysis groups in understanding and implementing the recommendations of the B-tagging and Vertexing Physics Object Group
+\item Reviewed more than a dozen analyses for compliance with recommendations and both updates to and approval of b-tagging usage
+\newline{}
+\end{itemize}}
+
+%====================
+% RESEARCH EXPERIENCE
+%====================
+\cventry{Jan 2023 -- Dec 2023}{Software R\&D Lead, Columnar Analysis and Inference as a Service}{University of Colorado, Boulder}{Fermilab, Batavia, IL, USA}{}{US-CMS funded project to integrate Inference-as-a-Service with HEP analysis tools
 \begin{itemize}
 \item Assumed role of project lead
-\item 
+\item Designed benchmarking code for various scenarios, as well as Prometheus metric analysis
 \item Supervised graduate student in conducting benchmark tests
-\item Analyzed data to identify system bottlenecks and improve
+\item Analyzed data to identify system bottlenecks and improve performance of the system at a premier DOE lab
+\item Paper submitted to Computing and Software for Big Science
 \newline{}
 \end{itemize}}
 
@@ -295,6 +331,7 @@ firmware
 %	PUBLICATIONS SECTION
 %----------------------------------------------------------------------------------------
 \section{Peer Reviewed Publications (w/ Substantial Contribution)}
+\cventry{Submitted}{C. Savard and N. Manganelli and ...}{Optimizing High Throughput Inference on Graph Neural Networks at Shared Computing Facilities with the NVIDIA Triton Inference Server}{\href{https://doi.org/10.48550/arXiv.2312.06838}{10.48550/arXiv.2312.06838}}{Computing and Software for Big Science}{}
 \cventry{Sep 2023}{CMS Collaboration}{Evidence for four-top quark production in proton-proton collisions at $\sqrt{s} = 13TeV$}{\href{https://doi.org/10.1016/j.physletb.2023.138076}{10.1016/j.physletb.2023.138076}}{\textit{Physics Letters B, Volume 844, Sep 10, 2023 (138076)}}{}
 %%\bibitem{fourtops}{A.~Tumasyan \textit{et al.} [CMS Collaboration]. ``Evidence for four-top quark production in proton-proton collisions at s=13TeV.'' {\em Physics Letters B}. \textbf{844} pp. 138076 (2023), https://doi.org/10.1016/j.physletb.2023.138076}
 \cventry{Aug 2022}{IRIS-HEP}{HSF IRIS-HEP Second Analysis Ecosystem Workshop Report}{From the AES II Workshop in Paris}{\href{https://doi.org/10.5281/zenodo.7003963}{https://doi.org/10.5281/zenodo.7003963}}{}
@@ -310,13 +347,14 @@ firmware
 %----------------------------------------------------------------------------------------
 
 \section{Workshops, Schools, Tutorials}
-\cventry{Dec 2023}{Lecturer}{2nd COFI Advanced Instrumentation and Analysis Techniques School}{\href{https://indico.cern.ch/event/1299889/timetable/}{Tools and Resources Needed for Machine Learning}}{}{}
+\cventry{Jun 2024}{Lecturer}{USCMS/IRIS-HEP Analysis Software Training}{\href{https://indico.cern.ch/event/1383972/contributions/5825305/}{coffea lecture} \href{https://indico.cern.ch/event/1383972/contributions/5825307/}{and exercise} \href{https://indico.cern.ch/event/1383972/}{, https://indico.cern.ch/event/1383972/}}{}{}
+\cventry{Dec 2023}{Lecturer}{2nd COFI Advanced Instrumentation and Analysis Techniques School}{\href{https://indico.cern.ch/event/1299889/timetable/}{Tools and Resources Needed for Machine Learning, https://indico.cern.ch/event/1299889/timetable/}}{}{}
 \cventry{Jul 2023}{Instructor}{CMS HATS @ LPC 2023, uproot and awkward-array}{\href{https://indico.cern.ch/event/1297663/}{https://indico.cern.ch/event/1297663/}}{}{}
 %%\bibitem{cofimltools}{Manganelli, N. ``Tools and Resources Needed for Machine Learning.'' Lecture, {\em 2nd COFI Advanced Instrumentation and Analysis Techniques School}, San Juan, Puerto Rico, December 9-10, 2023.}
 \cventry{Aug 2022}{Instructor}{CMS HATS @ LPC 2022, uproot and awkward-array}{\href{https://indico.cern.ch/event/1186603/}{https://indico.cern.ch/event/1186603/}}{By request of HATS Organizers}{}
 \cventry{May 2022}{Invited Participant}{Analysis Ecosystems Workshop II}{\href{https://indico.cern.ch/event/1125222/}{https://indico.cern.ch/event/1125222/}}{}{}
 \cventry{Jul 2021}{Student}{Yandex' Seventh Summer School on Machine Learning in High Energy Physics}{}{}{}
-\cventry{Jan 2021}{Lead Facilitator}{CMS Data Analysis School @ LPC 2021, Top Mass Exercise}{}{}{}
+\cventry{Jan 2021}{Lead Facilitator}{CMS Data Analysis School @ LPC 2021, Top Mass Exercise}{\href{https://indico.cern.ch/event/966368/timetable/}{https://indico.cern.ch/event/966368/timetable/}}{}{}
 
 %----------------------------------------------------------------------------------------
 %	TUTORIALS SECTION
@@ -327,8 +365,9 @@ firmware
 %----------------------------------------------------------------------------------------
 %	CONFERENCE TALKS, WORKSHOPS, SCHOOLS SECTION
 %----------------------------------------------------------------------------------------
-
 \section{Conference, Workshop, Research Talks}%, Workshops, Schools}
+\cventry{Jun 2024}{USCMS}{Benchmarking Scalable Triton Inference at Fermilab's Elastic Analysis Facility}{Plenary Talk}{\href{https://indico.cern.ch/event/1352950/contributions/5922016/}{Slides}}{}
+\cventry{Jun 2024}{LHCP2024}{Four Top Searches and Constraints on the Top Yukawa in CMS and ATLAS}{Talk}{\href{https://indico.cern.ch/event/1253590/contributions/5928238/}{Slides}}{}
 \cventry{Sep 2023}{Level 1 Trigger Workshop}{\textit{Global Track Trigger: Firmware and Algorithm status}}{Talk}{\href{https://indico.cern.ch/event/1288569/contributions/5500407/}{Slides and Recording}}{}
 \cventry{Apr 2023}{HL-LHC R\&D Initiative Meeting}{\textit{Triton Inference and Columnar Analysis}}{Talk}{\href{https://indico.cern.ch/event/1272845/}{Link}}{}
 \href{https://indico.cern.ch/event/1272845/}{}
